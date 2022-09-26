@@ -40,7 +40,7 @@ const questions = [
   {
     type: "list",
     name: "license",
-    message: "What license(s) did you use?",
+    message: "What license did you use?",
     choices: [
       "The MIT License",
       "Apache License",
@@ -52,7 +52,7 @@ const questions = [
       if (value) {
         return true;
       } else {
-        return "Please choose what license(s) you used. If you didn't use a license then please choose the 'N/A' option.";
+        return "Please choose what license you used. If you didn't use a license then please choose the 'N/A' option.";
       }
     },
   },
