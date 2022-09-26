@@ -41,7 +41,13 @@ const questions = [
     type: "list",
     name: "license",
     message: "What license(s) did you use?",
-    choices: ["N/A"],
+    choices: [
+      "The MIT License",
+      "Apache License",
+      "GNU License",
+      "UNLICENSED",
+      "N/A",
+    ],
     validate: (value) => {
       if (value) {
         return true;
