@@ -78,13 +78,32 @@ const promptUser = () => {
 };
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile("./src/README.md", data, (err) => {
+      if (err) {
+        reject(err);
+        return;
+      }
+      resolve({
+        ok: true,
+        message: "README.md Created",
+      });
+    });
+  });
+}
 
 // TODO: Create a function to initialize app
 function init() {
   promptUser(questions)
     .then((answers) => {
       return generateMarkdown(answers);
+    })
+    .then((readmeMarkdown) => {
+      return writeToFile(readmeMarkdown);
+    })
+    .then((response) => {
+      console.log(response);
     })
     .catch((err) => {
       console.log(err);
