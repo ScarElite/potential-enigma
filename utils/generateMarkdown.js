@@ -49,7 +49,7 @@ const generateMarkdown = (answers) => {
       return `
 -[Installation](#installation)
 -[Usage](#usage)
--[Contributing](#contributing)
+-[Contributing](#contribution)
 -[Test](#test)
 -[Questions](#questions)
     `;
@@ -58,7 +58,7 @@ const generateMarkdown = (answers) => {
 -[Installation](#installation)
 -[Usage](#usage)
 -[License](#license)
--[Contributing](#contributing)
+-[Contributing](#contribution)
 -[Test](#test)
 -[Questions](#questions)
     `;
@@ -90,11 +90,11 @@ const generateMarkdown = (answers) => {
   ## Usage
   ${answers.usage}
 
-  ## License - The following license was used in my project:
+  ## License
   ${answers.license}
-  
-  ## Contribution:
-  ${renderContribution()}
+
+  ## Contributing:
+  If you would like to contribute to this project and/or provide feedback on ways to improve upon this, please reach out to us by using the email provided down below in the [Questions](#questions) section.
 
   ## Tests
   ${answers.test}
@@ -103,6 +103,9 @@ const generateMarkdown = (answers) => {
   Please send all questions to: ${answers.questions}
   
   Git Hub Profile: https://github.com/${answers.github}
+
+  ## Contribution:
+  ${renderContribution()}
   `;
 };
 
