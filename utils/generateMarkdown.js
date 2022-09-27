@@ -49,9 +49,10 @@ const generateMarkdown = (answers) => {
       return `
 -[Installation](#installation)
 -[Usage](#usage)
--[Contributing](#contribution)
--[Test](#test)
+-[Contributing](#contributing)
+-[Test](#tests)
 -[Questions](#questions)
+-[Contribution](#contribution)
     `;
     } else {
       return `
@@ -94,7 +95,7 @@ const generateMarkdown = (answers) => {
   ${answers.license}
 
   ## Contributing:
-  If you would like to contribute to this project and/or provide feedback on ways to improve upon this, please reach out to us by using the email provided down below in the [Questions](#questions) section.
+  ${answers.contributing}
 
   ## Tests
   ${answers.test}

@@ -39,6 +39,11 @@ const questions = [
   },
   {
     type: "input",
+    name: "test",
+    message: "What are the instructions to test your application?",
+  },
+  {
+    type: "input",
     name: "usage",
     message: "How do we use your application?",
   },
@@ -63,14 +68,14 @@ const questions = [
   },
   {
     type: "input",
-    name: "contribution",
-    message:
-      "Did anyone else contribute to the project? If so, add their names. If not, leave this blank.",
+    name: "contributing",
+    message: "What are the best ways to contribute to your project?",
   },
   {
     type: "input",
-    name: "test",
-    message: "What are the instructions to test your application?",
+    name: "contribution",
+    message:
+      "Did anyone else contribute to the project? (Leave this blank if no one else contributed)",
   },
   {
     type: "input",
