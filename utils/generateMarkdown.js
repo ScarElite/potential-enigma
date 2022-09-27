@@ -65,6 +65,14 @@ const generateMarkdown = (answers) => {
     }
   }
 
+  function renderContribution(data) {
+    if (answers.contribution === "") {
+      return `Made with ❤️ by ${answers.name}`;
+    } else {
+      return `Made with ❤️ by ${answers.name}, ${answers.contribution}`;
+    }
+  }
+
   return `
   # ${answers.title}
 
@@ -84,9 +92,9 @@ const generateMarkdown = (answers) => {
 
   ## License - The following license was used in my project:
   ${answers.license}
-
+  
   ## Contribution:
-  Made with ❤️ by ${answers.contribution}
+  ${renderContribution()}
 
   ## Tests
   ${answers.test}
@@ -95,7 +103,7 @@ const generateMarkdown = (answers) => {
   Please send all questions to: ${answers.questions}
   
   Git Hub Profile: https://github.com/${answers.github}
-`;
+  `;
 };
 
 module.exports = generateMarkdown;

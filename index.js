@@ -24,8 +24,13 @@ const questions = [
   },
   {
     type: "input",
+    name: "title",
+    message: "What is the title of your project?",
+  },
+  {
+    type: "input",
     name: "description",
-    message: "What is the description of your application?",
+    message: "What is the description of your project?",
   },
   {
     type: "input",
@@ -59,7 +64,8 @@ const questions = [
   {
     type: "input",
     name: "contribution",
-    message: "Who contributed in creating the application?",
+    message:
+      "Did anyone else contribute to the project? If so, add their names. If not, leave this blank.",
   },
   {
     type: "input",
@@ -69,7 +75,7 @@ const questions = [
   {
     type: "input",
     name: "questions",
-    message: "How can someone contact you if they have questions?",
+    message: "Please enter your email for people to contact you.",
   },
 ];
 
@@ -86,7 +92,6 @@ function writeToFile(data) {
         return;
       }
       resolve({
-        ok: true,
         message: "README.md Created",
       });
     });
