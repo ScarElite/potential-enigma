@@ -59,9 +59,10 @@ const generateMarkdown = (answers) => {
 -[Installation](#installation)
 -[Usage](#usage)
 -[License](#license)
--[Contributing](#contribution)
--[Test](#test)
+-[Contributing](#contributing)
+-[Test](#tests)
 -[Questions](#questions)
+-[Contribution](#contribution)
     `;
     }
   }
